@@ -1,0 +1,337 @@
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+
+$overflow: hidden !global;
+$positionglobal: relative !global;
+$backgroundglobal: #fff !global;
+$font-sizeglobal: 26px !global;
+$marginglobal: 0 !global;
+$displayglobal: inline-block !global;
+
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+  overflow: $overflow;
+}
+
+.testimonials .testimonial-item {
+  $box-sizing: content-box;
+  $padding: 40px;
+  $box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: $box-sizing;
+  padding: $padding;
+  box-shadow: $box-shadow;
+  position: $positionglobal;
+  background: $backgroundglobal;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  $width: 90px;
+  $border-radius: 50px;
+  $border: 6px solid #fff;
+  $float: left;
+  $margin: 0 10px 0 0;
+  width: $width;
+  border-radius: $border-radius;
+  border: $border;
+  float: $float;
+  margin:$margin;
+}
+
+.testimonials .testimonial-item h3 {
+  $font-size: 18px;
+  $font-weight: bold;
+  $margin: 10px 0 5px 0;
+  $color: #111;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  margin: $margin;
+  color: $color;
+}
+
+.testimonials .testimonial-item h4 {
+  $font-size: 14px;
+  $color: #999;
+  font-size: $font-size;
+  color: $color;
+  margin: $marginglobal;
+}
+
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+  $color: #f8d1d3;
+  color: $color;
+  font-size: $font-sizeglobal;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+  $left: -5px;
+  display: $displayglobal;
+  left: $left;
+  position: $positionglobal;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+  $right: -5px;  
+  $top: 10px;
+  display: $displayglobal;
+  right: $right;
+  position: $positionglobal;
+  top: $top;
+}
+
+.testimonials .testimonial-item p {
+  $font-style: italic;
+  $margin: 15px 0 0 0;
+  $paddingglobal: 0 !global;
+  font-style: $font-style;
+  margin: $margin;
+  padding: $paddingglobal;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+    $margin-bottom: 30px;
+    margin-bottom: $margin-bottom;
+  }
+  
+  .portfolio #portfolio-flters {
+    padding: $paddingglobal;
+    $margin: 0 0 35px 0;
+    $list-style: none;
+    $text-alignglobal: center !global;
+    margin: $margin;
+    list-style: $list-style;
+    text-align: $text-alignglobal;
+  }
+  
+  .portfolio #portfolio-flters li {
+    $cursor: pointer;
+    $margin: 0 15px 15px 0;
+    $padding: 5px;
+    $font-size: 16px;
+    $font-weight: 600;
+    $line-heightglobal: 20px !global;
+    $color: #212529;
+    $margin-bottom: 5px;
+    $transitionglobal: all 0.3s ease-in-out !global;
+    cursor: $cursor;
+    margin: $margin;
+    display: $displayglobal;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-heightglobal;
+    color: $color;
+    margin-bottom: $margin-bottom;
+    transition: $transitionglobal;
+  }
+  
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    $colorglobal: #eb5d1e !global;
+    color: $colorglobal;
+  }
+  
+  .portfolio #portfolio-flters li:last-child {
+    margin-right: $marginglobal;
+  }
+  
+  .portfolio .portfolio-wrap {
+    $transitiongb: 0.3s !global;
+    $border-radius: 8px;
+    $z-indexglobal: 1 !global;
+    transition: $transitionglobal;
+    position: $positionglobal;
+    overflow: $overflow;
+    border-radius: $border-radius;
+    z-index: $z-indexglobal;
+  }
+  
+  .portfolio .portfolio-wrap::before {
+    $content: "";
+    $background: rgba(122, 105, 96, 0.6);
+    $positiongb: absolute !global;
+    $leftglobal: 100% !global;
+    $z-index: 2;
+    content: $content;
+    background: $background;
+    position: $positiongb;
+    left: $leftglobal;
+    right: $paddingglobal;
+    top: $paddingglobal;
+    bottom: $paddingglobal;
+    transition: $transitionglobal;
+    z-index: $z-index;
+  }
+  
+  .portfolio .portfolio-wrap img {
+    transition: $transitiongb;
+    position: $positionglobal;
+    z-index: $z-indexglobal;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-links {
+    opacity: $paddingglobal;
+    left: $paddingglobal;
+    right: $paddingglobal;
+    $top: calc(50% - 32px);
+    top: $top;
+    text-align: $text-alignglobal;
+    $z-indexgb: 3 !global;
+    z-index: $z-indexgb;
+    position: $positiongb;
+    transition: $transitionglobal;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-links a {
+    color: $colorglobal;
+    $margin: 0 4px;
+    margin: $margin;
+    line-height: $paddingglobal;
+    background-color: $backgroundglobal;
+    $padding-top: 6px;
+    $padding-right: 1px;
+    $border-radius: 50px;
+    padding-top: $padding-top;
+    padding-right: $padding-right;
+    border-radius: $border-radius;
+    text-align: $text-alignglobal;
+    $width: 32px;
+    $height: 32px;
+    width: $width;
+    height: $height;
+    display: $displayglobal;
+    transition: $transitiongb;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-links a i {
+    line-height: $paddingglobal;
+    font-size: $line-heightglobal;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-links a:hover {
+    background: $colorglobal;
+    color: $backgroundglobal;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: $paddingglobal;
+    position: $positiongb;
+    bottom: -20px;
+    left: $paddingglobal;
+    right: $paddingglobal;
+    text-align: $text-alignglobal;
+    z-index: $z-indexgb;
+    transition: $transitionglobal;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: $line-heightglobal;
+    color: $backgroundglobal;
+    $font-weight: 600;
+    font-weight: $font-weight;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-info p {
+    color: $backgroundglobal;
+    $font-size: 14px;
+    $text-transform: uppercase;
+    font-size: $font-size;
+    text-transform: $text-transform;
+  }
+  
+  .portfolio .portfolio-wrap:hover::before {
+    left: $paddingglobal;
+  }
+  
+  .portfolio .portfolio-wrap:hover .portfolio-links {
+    opacity: $z-indexglobal;
+    $top: calc(50% - 16px);
+    top: $top;
+  }
+  
+  .portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: $z-indexglobal;
+    bottom: $paddingglobal;
+  }
+  
+  /*--------------------------------------------------------------
+  # Portfolio Details
+  --------------------------------------------------------------*/
+  .portfolio-details {
+    $padding-top: 40px;
+    padding-top: $padding-top;
+  }
+  
+  .portfolio-details .portfolio-details-slider img {
+    width: $leftglobal;
+  }
+  
+  .portfolio-details .portfolio-details-slider .swiper-pagination {
+    margin-top: $line-heightglobal;
+    position: $positionglobal;
+  }
+  
+  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+    $width: 12px;
+    $height: 12px;
+    width: $width;
+    height: $height;
+    background-color: $backgroundglobal;
+    opacity: $z-indexglobal;
+    $border: 1px solid #868061;
+    border: $border
+  }
+  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: $colorglobal;
+  }
+  
+  .portfolio-details .portfolio-info {
+    $paddinggb: 30px !global;
+    $box-shadow: 0px 0 30px rgba(122, 105, 96, 0.08);
+    padding: $paddinggb;
+    box-shadow: $box-shadow;
+  }
+  
+  .portfolio-details .portfolio-info h3 {
+    $font-size: 22px;
+    $font-weight: 700;
+    $border-bottom: 1px solid #eee;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    margin-bottom: $line-heightglobal;
+    padding-bottom: $line-heightglobal;
+    border-bottom: $border-bottom;
+  }
+  
+  .portfolio-details .portfolio-info ul {
+    $list-style: none;
+    $font-size: 15px;
+    list-style: $list-style;
+    padding: $paddingglobal;
+    font-size: $font-size;
+  }
+  
+  .portfolio-details .portfolio-info ul li+li {
+    $margin-top: 10px;
+    margin-top: $margin-top;
+  }
+  
+  .portfolio-details .portfolio-description {
+    padding-top: $paddinggb;
+  }
+  
+  .portfolio-details .portfolio-description h2 {
+    font-size: $font-sizeglobal;
+    $font-weight: 700;
+    font-weight: $font-weight;
+    margin-bottom: $line-heightglobal;
+  }
+  
+  .portfolio-details .portfolio-description p {
+    padding: $paddingglobal;
+  }
+  

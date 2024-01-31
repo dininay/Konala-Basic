@@ -1,0 +1,83 @@
+.login-logo {
+  text-align: center;
+  padding: 20px 0;
+}
+.login-logo img {
+  max-width: 90px;
+  border-radius: 50%;
+}
+
+.forgot-password, .or-signin, .an-account {
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.error-message {
+  background-color: rgba(207, 127, 127, 0.753);
+  color: white;
+  text-align: center;
+  padding: 3px;
+  border-radius: 5px;
+  border: 2px solid red;
+}
+
+.social-icon {
+  color: rgba(187, 180, 142, 0.8);
+  margin-right: 5px;
+}
+.social-icon.facebook:hover i {
+  color: #868061;
+  transition: color 0.3s;
+}
+.social-icon.google {
+  margin-left: 5px;
+}
+.social-icon.google:hover i {
+  color: #868061;
+  transition: color 0.3s;
+}
+.social-icon.twitter {
+  margin-left: 5px;
+}
+.social-icon.twitter:hover i {
+  color: #868061;
+  transition: color 0.3s;
+}
+.social-icon.social-1 {
+  margin-left: 5px;
+}
+.social-icon.social-1:hover i {
+  color: #868061;
+  transition: color 0.3s;
+}
+.social-icon.social-2 {
+  margin-left: 10px;
+}
+.social-icon.social-2:hover i {
+  color: #868061;
+  transition: color 0.3s;
+}
+.social-icon.social-3 {
+  margin-left: 15px;
+}
+.social-icon.social-3:hover i {
+  color: #868061;
+  transition: color 0.3s;
+}
+.social-icon.social-4 {
+  margin-left: 20px;
+}
+.social-icon.social-4:hover i {
+  color: #868061;
+  transition: color 0.3s;
+}
+.social-icon.social-5 {
+  margin-left: 25px;
+}
+.social-icon.social-5:hover i {
+  color: #868061;
+  transition: color 0.3s;
+}
+
+/*# sourceMappingURL=kondisi_perulangan.css.map */

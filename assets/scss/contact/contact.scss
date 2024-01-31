@@ -1,0 +1,196 @@
+@use 'variables';
+@import 'mixins';
+@import 'styles';
+
+
+$global-bg-color: #fff;
+$global-border-color: #868061;
+$global-text-color: #7a6960;
+$global-accent-color: #868061;
+$global-link-color: #333;
+$global-link-hover-color: #868061;
+$global-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+$global-font-size: 14px;
+$global-font-weight: 600;
+$global-padding: 30px;
+$global-padding-small: 10px;
+$global-padding-large: 60px;
+$global-border-radius: 4px;
+$global-transition: 0.3s;
+$global-icon-size: 44px;
+$global-social-link-size: 36px;
+$global-social-link-spacing: 10px;
+$global-input-height: 44px;
+
+// Define a custom function to calculate element size as a percentage of its parent's size
+@function calculate-size($percentage) {
+  @return $percentage * 1%;
+}
+
+.contact {
+  & .info {
+    border-top: 3px solid $global-border-color;
+    border-bottom: 3px solid $global-border-color;
+    padding: $global-padding;
+    background: $global-bg-color;
+    width: 100%;
+    box-shadow: $global-box-shadow;
+
+    & i {
+      font-size: 20px;
+      color: $global-accent-color;
+      float: left;
+      width: $global-icon-size;
+      height: $global-icon-size;
+      background: #fdf1ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      transition: all $global-transition;
+    }
+
+    & h4 {
+      padding: 0 0 0 $global-padding-large;
+      font-size: 22px;
+      font-weight: $global-font-weight;
+      margin-bottom: 5px;
+      color: $global-text-color;
+    }
+
+    & p {
+      padding: 0 0 $global-padding-small $global-padding-large;
+      margin-bottom: 20px;
+      font-size: $global-font-size;
+      color: #ab9d95;
+
+      &.email {
+        padding-top: $global-padding-small;
+      }
+    }
+
+    & .social-links {
+      padding-left: $global-padding-large;
+
+      & a {
+        font-size: 18px;
+        display: inline-block;
+        background: $global-link-color;
+        color: $global-bg-color;
+        line-height: 1;
+        padding: 8px 0;
+        border-radius: 50%;
+        text-align: center;
+        width: $global-social-link-size;
+        height: $global-social-link-size;
+        transition: $global-transition;
+        margin-right: $global-social-link-spacing;
+
+        &:hover {
+          background: $global-link-hover-color;
+          color: $global-bg-color;
+        }
+      }
+    }
+
+    & .email:hover i,
+    & .address:hover i,
+    & .name:hover i,
+    & .phone:hover i {
+      background: $global-accent-color;
+      color: $global-bg-color;
+    }
+  }
+
+  & .php-email-form {
+    width: calculate-size(50); // Using the custom function to set the width to 50% of the parent's size
+    border-top: 3px solid $global-border-color;
+    border-bottom: 3px solid $global-border-color;
+    padding: $global-padding;
+    background: $global-bg-color;
+    box-shadow: $global-box-shadow;
+
+    & .form-group {
+      padding-bottom: $global-padding-small;
+    }
+
+    & .error-message {
+      display: none;
+      color: $global-bg-color;
+      background: #ed3c0d;
+      text-align: left;
+      padding: 15px;
+      font-weight: $global-font-weight;
+
+      br + br {
+        margin-top: 25px;
+      }
+    }
+
+    & .sent-message {
+      display: none;
+      color: $global-bg-color;
+      background: #18d26e;
+      text-align: center;
+      padding: 15px;
+      font-weight: $global-font-weight;
+    }
+
+    & .loading {
+      display: none;
+      background: $global-bg-color;
+      text-align: center;
+      padding: 15px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin: 0 10px -6px 0;
+        border: 3px solid #18d26e;
+        border-top-color: #eee;
+        animation: animate-loading 1s linear infinite;
+      }
+    }
+
+    & input,
+    & textarea {
+      border-radius: 0;
+      box-shadow: none;
+      font-size: $global-font-size;
+
+      &.input {
+        height: $global-input-height;
+      }
+
+      &.textarea {
+        padding: $global-padding-small $global-padding-large;
+      }
+    }
+
+    & button[type=submit] {
+      background: $global-accent-color;
+      border: 0;
+      padding: $global-padding-small $global-padding-large;
+      color: $global-bg-color;
+      transition: 0.4s;
+      border-radius: $global-border-radius;
+
+      &:hover {
+        background: #868061;
+      }
+    }
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

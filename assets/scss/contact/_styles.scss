@@ -1,0 +1,163 @@
+// Definisikan mixin untuk perulangan
+@mixin generate-hover-styles($class-names...) {
+  @each $class in $class-names {
+    .#{$class}:hover i {
+      background: variables.$global-accent-color;
+      color: variables.$global-bg-color;
+    }
+  }
+}
+
+// Selector utama
+.contact {
+  & .info {
+    border-top: 3px solid variables.$global-border-color;
+    border-bottom: 3px solid variables.$global-border-color;
+    padding: variables.$global-padding;
+    background: variables.$global-bg-color;
+    width: 100%;
+    box-shadow: variables.$global-box-shadow;
+
+    & i {
+      font-size: variables.$global-icon-size;
+      color: variables.$global-accent-color;
+      float: left;
+      width: variables.$global-icon-size;
+      height: variables.$global-icon-size;
+      background: #fdf1ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      transition: all variables.$global-transition;
+    }
+
+    & h4 {
+      padding: 0 0 0 variables.$global-padding-large;
+      font-size: 22px;
+      font-weight: variables.$global-font-weight;
+      margin-bottom: 5px;
+      color: variables.$global-text-color;
+    }
+
+    & p {
+      padding: 0 0 variables.$global-padding-small variables.$global-padding-large;
+      margin-bottom: 20px;
+      font-size: variables.$global-font-size;
+      color: #ab9d95;
+
+      &.email {
+        padding-top: variables.$global-padding-small;
+      }
+    }
+
+    & .social-links {
+      padding-left: variables.$global-padding-large;
+
+      & a {
+        font-size: 18px;
+        display: inline-block;
+        background: variables.$global-link-color;
+        color: variables.$global-bg-color;
+        line-height: 1;
+        padding: 8px 0;
+        border-radius: 50%;
+        text-align: center;
+        width: variables.$global-social-link-size;
+        height: variables.$global-social-link-size;
+        transition: variables.$global-transition;
+        margin-right: variables.$global-social-link-spacing;
+
+        &:hover {
+          background: variables.$global-link-hover-color;
+          color: variables.$global-bg-color;
+        }
+      }
+    }
+
+    // Panggil mixin untuk menghasilkan efek hover pada berbagai class
+    @include generate-hover-styles('email', 'address', 'name', 'phone');
+  }
+
+  & .php-email-form {
+    width: calculate-size(50);
+    border-top: 3px solid variables.$global-border-color;
+    border-bottom: 3px solid variables.$global-border-color;
+    padding: variables.$global-padding;
+    background: variables.$global-bg-color;
+    box-shadow: variables.$global-box-shadow;
+
+    & .form-group {
+      padding-bottom: variables.$global-padding-small;
+    }
+
+    & .error-message {
+      display: none;
+      color: variables.$global-bg-color;
+      background: #ed3c0d;
+      text-align: left;
+      padding: 15px;
+      font-weight: variables.$global-font-weight;
+
+      br + br {
+        margin-top: 25px;
+      }
+    }
+
+    & .sent-message {
+      display: none;
+      color: variables.$global-bg-color;
+      background: #18d26e;
+      text-align: center;
+      padding: 15px;
+      font-weight: variables.$global-font-weight;
+    }
+
+    & .loading {
+      display: none;
+      background: variables.$global-bg-color;
+      text-align: center;
+      padding: 15px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin: 0 10px -6px 0;
+        border: 3px solid #18d26e;
+        border-top-color: #eee;
+        animation: animate-loading 1s linear infinite;
+      }
+    }
+
+    & input,
+    & textarea {
+      border-radius: 0;
+      box-shadow: none;
+      font-size: variables.$global-font-size;
+
+      &.input {
+        height: variables.$global-input-height;
+      }
+
+      &.textarea {
+        padding: variables.$global-padding-small variables.$global-padding-large;
+      }
+    }
+
+    & button[type=submit] {
+      background: variables.$global-accent-color;
+      border: 0;
+      padding: variables.$global-padding-small variables.$global-padding-large;
+      color: variables.$global-bg-color;
+      transition: 0.4s;
+      border-radius: variables.$global-border-radius;
+
+      &:hover {
+        background: #868061;
+      }
+    }
+  }
+}

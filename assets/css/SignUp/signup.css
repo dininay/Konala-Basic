@@ -1,0 +1,71 @@
+.login-logo {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .login-logo img {
+    max-width: 90px;
+    border-radius: 50%; 
+  }
+  
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    
+  }
+  
+  .or-signin {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    
+  }
+  
+  .an-account {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    
+  }
+  
+  .error-message {
+    background-color: rgba(207, 127, 127, 0.753);
+    color: white;
+    text-align: center;
+    padding: 3px;
+    border-radius: 5px;
+    border: 2px solid red; 
+  }
+  
+  .facebook {
+    color: #bbb48ecc; 
+    margin-right: 5px;
+  }
+  .google {
+    color: #bbb48ecc; 
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .twitter {
+    color: #bbb48ecc; 
+    margin-left: 5px;
+  }
+  
+  .social-icon.facebook:hover i {
+    color: #868061; 
+    transition: color 0.3s; 
+  }
+  
+  
+  .social-icon.google:hover i {
+    color: #868061; 
+    transition: color 0.3s; 
+  }
+  
+  
+  .social-icon.twitter:hover i {
+    color: #868061; 
+    transition: color 0.3s; 
+  }
+  

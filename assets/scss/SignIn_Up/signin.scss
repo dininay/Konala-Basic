@@ -1,0 +1,64 @@
+$primary-color: rgba(207, 127, 127, 0.753);
+$secondary-color: #bbb48ecc;
+$hover-color: #868061;
+$error-border-color: red;
+
+// Fungsi untuk mengganti warna dengan alpha
+@function change-alpha($color, $new-alpha) {
+    @return rgba(red($color), green($color), blue($color), $new-alpha);
+}
+
+// Fungsi untuk mengganti border color error
+@function change-error-border-color($new-color) {
+    @return $new-color;
+}
+
+// Mixin untuk efek hover pada social icon
+@mixin social-icon-hover {
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+.login-logo {
+    text-align: center;
+    padding: 20px 0;
+    img {
+        max-width: 90px;
+        border-radius: 50%;
+    }
+}
+
+.forgot-password, .or-signin, .an-account {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.error-message {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    border-radius: 5px;
+    border: 2px solid change-error-border-color($error-border-color); // Menggunakan fungsi
+}
+
+.social-icon {
+    color: $secondary-color;
+    margin-right: 5px;
+
+    &.facebook {
+        @include social-icon-hover; // Menggunakan mixin
+    }
+
+    &.google {
+        margin-left: 5px;
+        @include social-icon-hover; // Menggunakan mixin
+    }
+
+    &.twitter {
+        margin-left: 5px;
+        @include social-icon-hover; // Menggunakan mixin
+    }
+}
